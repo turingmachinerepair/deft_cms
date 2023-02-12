@@ -8,7 +8,7 @@
 import Config
 
 config :deft_cms,
-  posts_per_page: 1
+  posts_per_page: 2
 
 # Configures the endpoint
 config :deft_cms, DeftCmsWeb.Endpoint,
