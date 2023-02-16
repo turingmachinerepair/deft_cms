@@ -119,6 +119,74 @@
   100% { opacity: 0; }
 }
 
+@font-face {
+    font-family: 'ibm_plex';
+    src: local('IBMPlexMonoText'), url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal
+  }
+
+body {
+    margin: 0;
+    color: #c5c6c7;
+    background-color: #0b0c10;
+    font-family: "ibm_plex";
+    font-size: 18px;
+}
+
+header {
+  background-color: #0b0c10 ;
+  margin-bottom: 20px;
+  border-width: 0px;
+}
+
+nav {
+  position: sticky;
+}
+
+.navigation_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b0c10;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+
+    box-shadow:
+    0 0 7px #bbb;
+}
+
+.navigation_list :active {
+    background-color: #45A29e;
+}
+
+.navigation_list_entry {
+    float: left;
+    border: 1px solid #bbb;
+    padding: 7px 8px;
+    box-shadow: 0 0 7px #bbb;
+}
+
+.navigation_list_entry :last-child {
+  border-right: none;
+}
+
+.navigation_list_entry a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.post-preview {
+    margin-bottom: 20px;
+    border-width: 3px;
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    box-shadow: 0 0 7px #45A29e
+  }
 
 .paginator-list li {
     display: inline;
@@ -130,7 +198,7 @@
 .paginator-list li[disabled] a {
     opacity: .4;
     pointer-events: none;
-    color: grey
+    color: grey;
 }
 
 .makeup .hll {background-color: #ffffcc}
