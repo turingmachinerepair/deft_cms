@@ -2,10 +2,10 @@ defmodule DeftCms.Blog do
     alias DeftCms.Blog.Post
 
     use NimblePublisher,
-      build: Post,
-      from: Application.app_dir(:deft_cms, "priv/posts/*.md"),
-      as: :posts,
-      highlighters: [:makeup_elixir, :makeup_erlang]
+        build: Post,
+        from: Application.app_dir(:deft_cms, "priv/posts/*.md"),
+        as: :posts,
+        highlighters: [:makeup_elixir, :makeup_erlang]
 
     # The @posts variable is first defined by NimblePublisher.
     # Let's further modify it by sorting all posts by descending date.
@@ -27,8 +27,8 @@ defmodule DeftCms.Blog do
 
     def get_posts_by_tag!(tag) do
         case Enum.filter(all_posts(), &(tag in &1.tags)) do
-          [] -> raise NotFoundError, "posts with tag=#{tag} not found"
-          posts -> posts
+            [] -> raise NotFoundError, "posts with tag=#{tag} not found"
+            posts -> posts
         end
     end
 

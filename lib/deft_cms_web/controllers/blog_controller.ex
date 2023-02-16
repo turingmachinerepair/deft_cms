@@ -3,7 +3,6 @@ defmodule DeftCmsWeb.BlogController do
 
     alias DeftCms.Blog
 
-
     def index(conn, %{"page" => page_str}) do
         all_posts = Blog.all_posts()
         case Integer.parse(page_str) do
