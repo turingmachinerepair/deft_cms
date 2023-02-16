@@ -154,8 +154,7 @@ nav {
     position: -webkit-sticky; /* Safari */
     position: sticky;
 
-    box-shadow:
-    0 0 7px #bbb;
+    /* box-shadow: 0 0 7px #bbb;*/
 }
 
 .navigation_list :active {
@@ -166,7 +165,7 @@ nav {
     float: left;
     border: 1px solid #bbb;
     padding: 7px 8px;
-    box-shadow: 0 0 7px #bbb;
+    /* box-shadow: 0 0 7px #bbb;*/
 }
 
 .navigation_list_entry :last-child {
@@ -249,7 +248,7 @@ nav {
 
 .post-view-title {
     margin-bottom: 5px;
-    text-shadow: darkcyan 3px 3px 10px;
+    text-shadow: 2px 2px darkcyan;
 }
 
 .post {

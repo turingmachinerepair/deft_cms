@@ -1,4 +1,4 @@
-<%= link "← All posts", to: Routes.blog_path(@conn, :index)%>
+<%= link "<- All posts", to: Routes.blog_path(@conn, :index)%>
 
 <h1 class="post-view-title"><%= @post.title %></h1>
 <time><%= @post.date %></time>
@@ -10,3 +10,4 @@
 <div class = "post">
 <%= raw @post.body %>
 </div>
+<%= link "<- All posts", to: Routes.blog_path(@conn, :index)%>
