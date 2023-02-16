@@ -24,7 +24,7 @@ defmodule DeftCmsWeb.PaginatorHelpers do
 
       content_tag(:li, disabled: disabled) do
         link to: "?#{params}", rel: "prev" do
-          "<"
+          "<<"
         end
       end
     end
@@ -48,7 +48,7 @@ defmodule DeftCmsWeb.PaginatorHelpers do
 
       content_tag(:li, disabled: disabled) do
         link to: "?#{params}", rel: "next" do
-          ">"
+          ">>"
         end
       end
     end

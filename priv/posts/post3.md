@@ -1,9 +1,10 @@
 
 %{
-  title: "Hello World3!",
-  author: "Jaime Iniesta",
-  tags: ~w(hello),
-  description: "Our third blog post is here"
+    id: "post-3",
+    title: "Hello World3!",
+    author: "Jaime Iniesta",
+    tags: ~w(tag2 tag3),
+    description: "Our third blog post is here"
 }
 ---
 Yes, this is **the post** you've been waiting for.
