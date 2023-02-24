@@ -256,3 +256,52 @@ nav {
     border-top-width: 1px;
 
 }
+
+.landing h1 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 5px;
+}
+
+.landing h2 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 5px;
+}
+
+.landing h3 {
+    margin-bottom: 10px;
+}
+
+.landing h4 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 0;
+}
+
+.landing p {
+    margin-bottom: 5px;
+}
+
+.landing ul {
+    list-style-type: ">";
+    margin-bottom: 5px;
+}
+ul li::marker {
+    color: red;
+}
+
+.landing ul li {
+    margin-bottom: 0px;
+}
+
+.landing a{
+    color: cyan;
+}
+
+.landing blockquote{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    border-left-color: darkcyan;
+
+}

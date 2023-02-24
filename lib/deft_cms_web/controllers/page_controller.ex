@@ -4,6 +4,6 @@ defmodule DeftCmsWeb.PageController do
 
   def index(conn, _params) do
     data = Landing.landing()
-    render(conn, "index.html", data: data)
+    render(conn, "index.html", data: data, page_title: "Main")
   end
 end
