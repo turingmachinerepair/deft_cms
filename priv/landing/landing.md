@@ -1,11 +1,14 @@
 
 %{}
 ---
+
+<img src = "/images/photo.jpg" style="width: auto; max-width:200px" class = "main-photo">
+
 ## Greetings.    
 ## My name is Petrov Alexander Nikolaevich.    
 ### I am a backend software developer.  
-- Erlang dev at !["Big Data Technology"](/images/bdt.png) [Big Data Technology](https://www.bdt.group/) for 1 year 7 months.  
-- MSc Computer Science and Engineering at ![](/images/mephi-logo.png)[Moscow Engineering Physics Institute](https://eng.mephi.ru/)  (2021)  
+- Erlang dev at !["Big Data Technology"](/images/bdt.png) [Big Data Technology](https://www.bdt.group/) for 1y 7m.  
+- MSc Computer Science and Engineering at ![](/images/mephi-logo.png)[Moscow Engineering Physics Institute](https://eng.mephi.ru/) '21  
 - Into homelabbing and building computers.
 
 ### Contact me

@@ -11,7 +11,6 @@ Yes, this is **the post** you've been waiting for.
 
 
 ```erlang
-
 -module(test).
 
 test(Payload) ->
