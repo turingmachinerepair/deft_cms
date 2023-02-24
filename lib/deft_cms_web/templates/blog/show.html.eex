@@ -8,6 +8,6 @@
 </div>
 
 <div class = "post">
-<%= raw @post.body %>
+<%= raw(@post.body) %>
 </div>
 <%= link "<- All posts", to: Routes.blog_path(@conn, :index)%>
