@@ -8,6 +8,8 @@ Build with https://github.com/dashbitco/nimble_publisher
 - [ ] Localization
 - [ ] Personal projects tab (with fancy layout (and when they will be ready))
 - [ ] Refactor paginator
+- [ ] Tests
+- [ ] CI pipeline with linter, dialyzer and tests
 
 ## Credits
 Started with this tutorial: https://elixirschool.com/en/lessons/misc/nimble_publisher   
