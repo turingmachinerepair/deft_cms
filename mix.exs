@@ -10,7 +10,13 @@ defmodule DeftCms.MixProject do
         compilers: Mix.compilers(),
         start_permanent: Mix.env() == :prod,
         aliases: aliases(),
-        deps: deps()
+        deps: deps(),
+        releases: [ # add releases configuration
+            deft_cms: [ # we can name releases anything, this will be prod's config
+                include_executables_for: [:unix], # we'll be deploying to Linux only
+                steps: [:assemble, :tar] # have Mix automatically create a tarball after assembly
+            ]
+        ]
     ]
   end
 
