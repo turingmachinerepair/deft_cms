@@ -1,7 +1,8 @@
 # DeftCms
 
-Simple CMS for my personal site.
-Build with https://github.com/dashbitco/nimble_publisher
+Simple CMS for my personal site.  
+Honestly, nothing particularly notable.  
+Built with https://github.com/dashbitco/nimble_publisher
 
 ## Plans
 - [ ] Search (text, titles, tags)
