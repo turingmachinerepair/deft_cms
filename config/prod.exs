@@ -47,3 +47,11 @@ config :logger, level: :info
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
+config :deft_cms, DeftCmsWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/posts/.*.md$",
+      ~r"priv/landing/.*.md$"
+    ]
+  ]
