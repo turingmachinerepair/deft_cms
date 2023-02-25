@@ -9,11 +9,13 @@ defmodule DeftCmsWeb.PaginatorHelpers do
 
     end
     def render(conn, data, class: class) do
-      first = prev_button(conn, data)
+      start = start_button(conn, data)
+      prev = prev_button(conn, data)
       pages = page_buttons(conn, data)
-      last = next_button(conn, data)
+      next = next_button(conn, data)
+      finish = finish_button(conn, data)
 
-      content_tag(:ul, [first, pages, last], class: class)
+      content_tag(:ul, [start, prev, pages, next, finish], class: class)
     end
 
 
@@ -24,7 +26,7 @@ defmodule DeftCmsWeb.PaginatorHelpers do
 
       content_tag(:li, disabled: disabled) do
         link to: "?#{params}", rel: "prev" do
-          "<<"
+          "<"
         end
       end
     end
@@ -48,9 +50,33 @@ defmodule DeftCmsWeb.PaginatorHelpers do
 
       content_tag(:li, disabled: disabled) do
         link to: "?#{params}", rel: "next" do
-          ">>"
+          ">"
         end
       end
+    end
+
+    defp start_button(conn, data) do
+        page = 1
+        disabled = data.current_page == page
+        params = build_params(conn, page)
+
+        content_tag(:li, disabled: disabled) do
+          link to: "?#{params}", rel: "start" do
+            "<<"
+          end
+        end
+    end
+
+    defp finish_button(conn, data) do
+        page = data.total_pages
+        disabled = data.current_page == page
+        params = build_params(conn, page)
+
+        content_tag(:li, disabled: disabled) do
+          link to: "?#{params}", rel: "finish" do
+            ">>"
+          end
+        end
     end
 
     defp build_params(conn, page) do
