@@ -13,10 +13,13 @@ defmodule DeftCms.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: DeftCms.PubSub},
       # Start the Endpoint (http/https)
-      DeftCmsWeb.Endpoint
+      DeftCmsWeb.Endpoint,
       # Start a worker by calling: DeftCms.Worker.start_link(arg)
       # {DeftCms.Worker, arg}
+      {DeftCms.Updater, dirs: [Path.dirname(Application.get_env(:deft_cms, :blog_directory))]}
     ]
+
+    load_content()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
@@ -30,5 +33,10 @@ defmodule DeftCms.Application do
   def config_change(changed, _new, removed) do
     DeftCmsWeb.Endpoint.config_change(changed, removed)
     :ok
+  end
+
+  defp load_content() do
+    DeftCms.Blog.load_posts()
+    DeftCms.Landing.load_landing()
   end
 end

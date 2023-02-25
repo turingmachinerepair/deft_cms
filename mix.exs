@@ -51,9 +51,10 @@ defmodule DeftCms.MixProject do
         {:gettext, "~> 0.18"},
         {:jason, "~> 1.2"},
         {:plug_cowboy, "~> 2.5"},
+        {:file_system, "~> 0.2"},
 
-
-        {:nimble_publisher, "~> 0.1.1"},
+        {:earmark, "~> 1.4"},
+        {:makeup, "~> 1.0"},
         {:makeup_elixir, ">= 0.0.0"},
         {:makeup_erlang, ">= 0.0.0"},
 
