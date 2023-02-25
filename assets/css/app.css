@@ -1,7 +1,6 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 @import "./erlang_dark.css";
-@import "./cv.css";
 
 /* Alerts and form errors used by phx.new */
 .alert {

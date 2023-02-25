@@ -12,6 +12,3 @@ defmodule DeftCms.Landing do
     def landing, do: @landing
 
   end
-
-
- defmodule NotFoundError, do: defexception [:message, plug_status: 404]
