@@ -1,7 +1,14 @@
 # DeftCms
 
-6. Блок с личной информацией
+Simple CMS for my personal site.
+Build with https://github.com/dashbitco/nimble_publisher
 
-----
-1. Переключатель языка
-2. Переключатель тем
+## Plans
+- [ ] Search (text, titles, tags)
+- [ ] Localization
+- [ ] Personal projects tab (with fancy layout (and when they will be ready))
+- [ ] Refactor paginator
+
+## Credits
+Started with this tutorial: https://elixirschool.com/en/lessons/misc/nimble_publisher   
+Paginator from here: https://dev.to/ricardoruwer/create-a-paginator-using-elixir-and-phoenix-1hnk
