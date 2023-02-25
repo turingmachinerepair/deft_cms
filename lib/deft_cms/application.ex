@@ -13,9 +13,10 @@ defmodule DeftCms.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: DeftCms.PubSub},
       # Start the Endpoint (http/https)
-      DeftCmsWeb.Endpoint
+      DeftCmsWeb.Endpoint,
       # Start a worker by calling: DeftCms.Worker.start_link(arg)
       # {DeftCms.Worker, arg}
+      {DeftCms.Updater, dirs: [Path.dirname(Application.get_env(:deft_cms, :blog_directory))]}
     ]
 
     load_content()
