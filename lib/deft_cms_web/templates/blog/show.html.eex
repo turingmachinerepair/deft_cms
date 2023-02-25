@@ -1,4 +1,4 @@
-<%= link "<", to: Routes.blog_path(@conn, :index), style: "color: red"%> <%= link "All posts", to: Routes.blog_path(@conn, :index), style: "color: red"%>
+<%= link "<", to:  NavigationHistory.last_path(@conn, 1), style: "color: red"%> <%= link "All posts", to: NavigationHistory.last_path(@conn, 1), style: "color: red"%>
 
 <h1 class="post-view-title"><%= @post.title %></h1>
 <time><%= @post.date %></time>
@@ -10,4 +10,4 @@
 <div class = "post">
 <%= raw(@post.body) %>
 </div>
-<%= link "<", to: Routes.blog_path(@conn, :index), style: "color: red"%> <%= link "All posts", to: Routes.blog_path(@conn, :index), style: "color: red"%>
+<%= link "<", to:  NavigationHistory.last_path(@conn, 1), style: "color: red"%> <%= link "All posts", to: NavigationHistory.last_path(@conn, 1), style: "color: red"%>

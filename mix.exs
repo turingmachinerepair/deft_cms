@@ -3,14 +3,14 @@ defmodule DeftCms.MixProject do
 
   def project do
     [
-      app: :deft_cms,
-      version: "0.1.0",
-      elixir: "~> 1.12",
-      elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: Mix.compilers(),
-      start_permanent: Mix.env() == :prod,
-      aliases: aliases(),
-      deps: deps()
+        app: :deft_cms,
+        version: "0.1.0",
+        elixir: "~> 1.12",
+        elixirc_paths: elixirc_paths(Mix.env()),
+        compilers: Mix.compilers(),
+        start_permanent: Mix.env() == :prod,
+        aliases: aliases(),
+        deps: deps()
     ]
   end
 
@@ -33,32 +33,28 @@ defmodule DeftCms.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.6.11"},
-      {:phoenix_html, "~> 3.0"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.17.5"},
-      {:floki, ">= 0.30.0", only: :test},
-      {:phoenix_live_dashboard, "~> 0.6"},
-      {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
-      {:telemetry_metrics, "~> 0.6"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.18"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
+        {:phoenix, "~> 1.6.11"},
+        {:phoenix_html, "~> 3.0"},
+        {:phoenix_live_reload, "~> 1.2", only: :dev},
+        {:phoenix_live_view, "~> 0.17.5"},
+        {:floki, ">= 0.30.0", only: :test},
+        {:phoenix_live_dashboard, "~> 0.6"},
+        {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
+        {:telemetry_metrics, "~> 0.6"},
+        {:telemetry_poller, "~> 1.0"},
+        {:gettext, "~> 0.18"},
+        {:jason, "~> 1.2"},
+        {:plug_cowboy, "~> 2.5"},
 
 
-      {:nimble_publisher, "~> 0.1.1"},
-      {:makeup_elixir, ">= 0.0.0"},
-      {:makeup_erlang, ">= 0.0.0"}
+        {:nimble_publisher, "~> 0.1.1"},
+        {:makeup_elixir, ">= 0.0.0"},
+        {:makeup_erlang, ">= 0.0.0"},
+
+        {:navigation_history, "~> 0.4"}
     ]
   end
 
-  # Aliases are shortcuts or tasks specific to the current project.
-  # For example, to install project dependencies and perform other setup tasks, run:
-  #
-  #     $ mix setup
-  #
-  # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
       setup: ["deps.get"],
