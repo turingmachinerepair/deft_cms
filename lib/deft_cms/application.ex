@@ -18,6 +18,8 @@ defmodule DeftCms.Application do
       # {DeftCms.Worker, arg}
     ]
 
+    load_content()
+
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: DeftCms.Supervisor]
@@ -30,5 +32,10 @@ defmodule DeftCms.Application do
   def config_change(changed, _new, removed) do
     DeftCmsWeb.Endpoint.config_change(changed, removed)
     :ok
+  end
+
+  defp load_content() do
+    DeftCms.Blog.load_posts()
+    DeftCms.Landing.load_landing()
   end
 end

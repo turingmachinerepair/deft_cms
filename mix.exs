@@ -53,7 +53,8 @@ defmodule DeftCms.MixProject do
         {:plug_cowboy, "~> 2.5"},
 
 
-        {:nimble_publisher, "~> 0.1.1"},
+        {:earmark, "~> 1.4"},
+        {:makeup, "~> 1.0"},
         {:makeup_elixir, ">= 0.0.0"},
         {:makeup_erlang, ">= 0.0.0"},
 

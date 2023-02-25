@@ -1,22 +1,14 @@
 defmodule DeftCms.Blog do
     alias DeftCms.Blog.Post
 
-    use NimblePublisher,
-        build: Post,
-        from: Application.app_dir(:deft_cms, "priv/posts/*.md"),
-        as: :posts,
-        highlighters: [:makeup_elixir, :makeup_erlang]
-
-    # The @posts variable is first defined by NimblePublisher.
-    # Let's further modify it by sorting all posts by descending date.
-    @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
-
-    # Let's also get all tags
-    @tags @posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
-
     # And finally export them
-    def all_posts, do: @posts
-    def all_tags, do: @tags
+    def all_posts() do
+        :persistent_term.get(:posts)
+    end
+
+    def all_tags() do
+        :persistent_term.get(:tags)
+    end
 
     def get_post_by_id!(id) do
         Enum.find(all_posts(), &(&1.id == id)) ||
@@ -28,6 +20,15 @@ defmodule DeftCms.Blog do
             [] -> raise NotFoundError, "posts with tag=#{tag} not found"
             posts -> posts
         end
+    end
+
+    def load_posts() do
+        blog_directory = Application.get_env(:deft_cms, :blog_directory)
+        posts0 = DeftCms.Publisher.Press.render(blog_directory, Post, highlighters: [:makeup_elixir, :makeup_erlang])
+        posts = Enum.sort_by(posts0, & &1.date, {:desc, Date})
+        tags = posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
+        :persistent_term.put(:posts, posts)
+        :persistent_term.put(:tags, tags)
     end
 
   end
