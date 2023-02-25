@@ -19,8 +19,6 @@ defmodule DeftCmsWeb.Router do
 
     get "/", PageController, :index
 
-    get "/cv", CVController, :index
-
     get "/blog", BlogController, :index
     get "/blog/:id", BlogController, :show
   end
