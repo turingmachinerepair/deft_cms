@@ -1,14 +1,11 @@
 defmodule DeftCms.Blog do
     alias DeftCms.Blog.Post
 
-    # And finally export them
-    def all_posts() do
-        :persistent_term.get(:posts)
-    end
+    @tags_term_name {__MODULE__, :tags}
+    @posts_term_name {__MODULE__, :posts}
 
-    def all_tags() do
-        :persistent_term.get(:tags)
-    end
+    def all_posts, do: :persistent_term.get(@posts_term_name)
+    def all_tags, do: :persistent_term.get(@tags_term_name)
 
     def get_post_by_id!(id) do
         Enum.find(all_posts(), &(&1.id == id)) ||
@@ -27,11 +24,9 @@ defmodule DeftCms.Blog do
         posts0 = DeftCms.Publisher.Press.render(blog_directory, Post, highlighters: [:makeup_elixir, :makeup_erlang])
         posts = Enum.sort_by(posts0, & &1.date, {:desc, Date})
         tags = posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
-        :persistent_term.put(:posts, posts)
-        :persistent_term.put(:tags, tags)
+        :persistent_term.put(@posts_term_name, posts)
+        :persistent_term.put(@tags_term_name, tags)
     end
-
-  end
-
+end
 
  defmodule NotFoundError, do: defexception [:message, plug_status: 404]
