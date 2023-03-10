@@ -1,0 +1,13 @@
+<%= link "<", to:  NavigationHistory.last_path(@conn, 1), style: "color: red"%> <%= link "All posts", to: NavigationHistory.last_path(@conn, 1), style: "color: red"%>
+
+<h1 class="post-view-title"><%= @post.title %></h1>
+<time><%= @post.date %></time>
+
+<div class = "tags" style = "margin-bottom: 5px">
+    Tags: <%= for tag <- @post.tags do %><a class = "tag"><%=tag%></a> <% end %>
+</div>
+
+<div class = "post">
+<%= raw(@post.body) %>
+</div>
+<%= link "<", to:  NavigationHistory.last_path(@conn, 1), style: "color: red"%> <%= link "All posts", to: NavigationHistory.last_path(@conn, 1), style: "color: red"%>

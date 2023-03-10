@@ -1,0 +1,13 @@
+/_build
+/cover
+/deps
+/doc
+/priv/posts/*
+/priv/landing/*
+/priv/static/images/*
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/

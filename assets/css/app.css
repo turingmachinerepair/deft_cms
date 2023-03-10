@@ -1,0 +1,325 @@
+/* This file is for your main application CSS */
+@import "./phoenix.css";
+@import "./erlang_dark.css";
+
+/* Alerts and form errors used by phx.new */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+.invalid-feedback {
+  color: #a94442;
+  display: block;
+  margin: -1rem 0 2rem;
+}
+
+/* LiveView specific classes for your customization */
+.phx-no-feedback.invalid-feedback,
+.phx-no-feedback .invalid-feedback {
+  display: none;
+}
+
+.phx-click-loading {
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.phx-loading{
+  cursor: wait;
+}
+
+.phx-modal {
+  opacity: 1!important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.phx-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.phx-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.phx-modal-close:hover,
+.phx-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fade-in-scale {
+  animation: 0.2s ease-in 0s normal forwards 1 fade-in-scale-keys;
+}
+
+.fade-out-scale {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-scale-keys;
+}
+
+.fade-in {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-in-keys;
+}
+.fade-out {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
+}
+
+@keyframes fade-in-scale-keys{
+  0% { scale: 0.95; opacity: 0; }
+  100% { scale: 1.0; opacity: 1; }
+}
+
+@keyframes fade-out-scale-keys{
+  0% { scale: 1.0; opacity: 1; }
+  100% { scale: 0.95; opacity: 0; }
+}
+
+@keyframes fade-in-keys{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out-keys{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@font-face {
+    font-family: 'ibm_plex';
+    src: local('IBMPlexMonoText'), url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal
+  }
+
+body {
+    margin: 0;
+    color: #c5c6c7;
+    background-color: #0b0c10;
+    font-family: "ibm_plex";
+    font-size: 18px;
+}
+
+header {
+  background-color: #0b0c10 ;
+  margin-bottom: 20px;
+  border-width: 0px;
+}
+
+nav {
+  position: sticky;
+}
+
+.navigation_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b0c10;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+
+    /* box-shadow: 0 0 7px #bbb;*/
+}
+
+.navigation_list :active {
+    background-color: #45A29e;
+}
+
+.navigation_list_entry {
+    float: left;
+    border: 1px solid #bbb;
+    padding: 7px 8px;
+    /* box-shadow: 0 0 7px #bbb;*/
+}
+
+.navigation_list_entry :last-child {
+  border-right: none;
+}
+
+.navigation_list_entry a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.post-list{
+    margin-bottom: 1rem;
+}
+
+.post-preview {
+    margin-bottom: 5px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    border-color: #aaaaaa;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+  }
+
+.post-preview h2 {
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 5px;}
+
+.post-preview h2 a {
+    color: white;
+}
+
+.tag {
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+    color: white;
+    border-radius: 7px;
+}
+
+.paginator-list li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid white;
+}
+
+.paginator-list li:first-child {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid white;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+.paginator-list li:last-child {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid white;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+
+.paginator-list li a:visited{
+   color: white
+}
+.paginator-list li[disabled] a {
+    opacity: .4;
+    pointer-events: none;
+    color: lightgray;
+}
+
+
+.post-view-title {
+    margin-bottom: 5px;
+    text-shadow: 2px 2px darkcyan;
+}
+
+.post {
+    border-top-style: dashed;
+    border-top-width: 1px;
+}
+
+.post pre {
+    background-color: #000000;
+    border-left-color: red;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 0;
+    white-space:pre-wrap;
+}
+
+.landing h1 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 5px;
+}
+
+.landing h2 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 5px;
+}
+
+.landing h3 {
+    margin-bottom: 10px;
+}
+
+.landing h4 {
+    text-shadow: 2px 2px darkcyan;
+    margin-bottom: 0;
+}
+
+.landing p {
+    margin-bottom: 5px;
+}
+
+.landing ul {
+    list-style-type: ">";
+    margin-bottom: 5px;
+}
+ul li::marker {
+    color: red;
+}
+
+.landing ul li {
+    margin-bottom: 0px;
+}
+
+.landing a{
+    color: cyan;
+}
+
+.landing blockquote{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    border-left-color: darkcyan;
+
+}
+
+.main-photo {
+    float: right;
+    box-shadow: 0px 4px 2px  cyan,
+                4px 0px 2px  red;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-left: 3px;
+}
