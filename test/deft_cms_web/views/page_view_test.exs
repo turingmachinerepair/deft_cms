@@ -1,3 +1,3 @@
 defmodule DeftCmsWeb.PageViewTest do
-  use DeftCmsWeb.ConnCase, async: true
+    use DeftCmsWeb.ConnCase, async: true
 end

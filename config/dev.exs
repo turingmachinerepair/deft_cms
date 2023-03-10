@@ -7,17 +7,17 @@ import Config
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
 config :deft_cms, DeftCmsWeb.Endpoint,
-  # Binding to loopback ipv4 address prevents access from other machines.
-  # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
-  check_origin: false,
-  code_reloader: true,
-  debug_errors: true,
-  secret_key_base: "CESfticyTQ4d0xokAhNWDZGI0+5vGuiCIqoCNEtI0naXyGmQd1u6orO2TN6QTSak",
-  watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
-  ]
+    # Binding to loopback ipv4 address prevents access from other machines.
+    # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
+    http: [ip: {127, 0, 0, 1}, port: 4000],
+    check_origin: false,
+    code_reloader: true,
+    debug_errors: true,
+    secret_key_base: "CESfticyTQ4d0xokAhNWDZGI0+5vGuiCIqoCNEtI0naXyGmQd1u6orO2TN6QTSak",
+    watchers: [
+        # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
+        esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    ]
 
 # ## SSL Support
 #
@@ -45,14 +45,14 @@ config :deft_cms, DeftCmsWeb.Endpoint,
 
 # Watch static and templates for browser reloading.
 config :deft_cms, DeftCmsWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/deft_cms_web/(live|views)/.*(ex)$",
-      ~r"lib/deft_cms_web/templates/.*(eex)$"
+    live_reload: [
+        patterns: [
+        ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+        ~r"priv/gettext/.*(po)$",
+        ~r"lib/deft_cms_web/(live|views)/.*(ex)$",
+        ~r"lib/deft_cms_web/templates/.*(eex)$"
+        ]
     ]
-  ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

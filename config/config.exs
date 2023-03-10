@@ -8,31 +8,31 @@
 import Config
 
 config :deft_cms,
-  posts_per_page: 1,
-  landing_file: "priv/landing/landing.md",
-  blog_directory: "priv/posts/*"
+    posts_per_page: 1,
+    landing_file: "priv/landing/landing.md",
+    blog_directory: "priv/posts/*"
 
 # Configures the endpoint
 config :deft_cms, DeftCmsWeb.Endpoint,
-  url: [host: "localhost"],
-  render_errors: [view: DeftCmsWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: DeftCms.PubSub,
-  live_view: [signing_salt: "bpHTKsLm"]
+    url: [host: "localhost"],
+    render_errors: [view: DeftCmsWeb.ErrorView, accepts: ~w(html json), layout: false],
+    pubsub_server: DeftCms.PubSub,
+    live_view: [signing_salt: "bpHTKsLm"]
 
 # Configure esbuild (the version is required)
 config :esbuild,
-  version: "0.14.29",
-  default: [
-    args:
-      ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
-    cd: Path.expand("../assets", __DIR__),
-    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
-  ]
+    version: "0.14.29",
+    default: [
+        args:
+        ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+        cd: Path.expand("../assets", __DIR__),
+        env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+    ]
 
 # Configures Elixir's Logger
 config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+    format: "$time $metadata[$level] $message\n",
+    metadata: [:request_id]
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

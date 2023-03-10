@@ -15,6 +15,6 @@ config :deft_cms, DeftCmsWeb.Endpoint, cache_static_manifest: "priv/static/cache
 config :logger, level: :info
 
 config :deft_cms,
-  posts_per_page: 10,
-  landing_file: "content/landing/landing.md",
-  blog_directory: "content/blogposts/*"
+    posts_per_page: 10,
+    landing_file: "content/landing/landing.md",
+    blog_directory: "content/blogposts/*"
