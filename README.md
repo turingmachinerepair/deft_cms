@@ -21,6 +21,17 @@ Simple CMS for my personal site.
 #post body, regular markdown.
 ```
 
+## Dependencies
+- `inotify-tools` - to watch directories for changes.
+
+## Building
+`make build` - thats all.
+
+## Deployment
+1. Uncompress release archive
+2. Redact `run.sh` script - apply valid `SECRET_KEY_BASE` (maybe change other vars)
+3. Run `run.sh`
+
 ## Plans
 - [ ] Search (text, titles, tags)
 - [ ] Localization
@@ -30,6 +41,7 @@ Simple CMS for my personal site.
 - [ ] CI pipeline with linter, dialyzer and tests
 - [ ] Flexible fs change watcher setup (maybe a behaviour which exports list of events and on_update callback)
 - [ ] More configurability: list of tabs, favicon and title suffix are hardcoded (you can modify them though).
+
 
 ## Credits
 General concept, DeftCms.Publisher.Highliter and DeftCms.Publisher.Press from: https://github.com/dashbitco/nimble_publisher  

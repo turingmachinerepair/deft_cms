@@ -7,7 +7,8 @@ defmodule DeftCmsWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_deft_cms_key",
-    signing_salt: "jFyfH36b"
+    signing_salt: "jFyfH36b",
+    extra: "SameSite=Strict"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
